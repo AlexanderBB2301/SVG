@@ -1,0 +1,137 @@
+#img-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: whitesmoke;
+  overflow: scroll;
+}
+
+.items {
+  position: absolute;
+}
+
+#rain {
+  animation: raining 2s linear infinite;
+  z-index: 3;
+}
+#rain2 {
+  animation: raining 3s linear infinite;
+  z-index: 4;
+}
+
+@keyframes raining {
+  0% {
+    opacity: 0;
+    transform: translateY(0vh), translateX(5vh);
+  }
+  10% {
+    opacity: 0.3;
+    transform: translateX(10vh), translateY(15vh);
+  }
+  20% {
+    opacity: 0.6;
+    transform: translateX(25), translateY(25vh);
+  }
+  30% {
+    opacity: 0.9;
+    transform: translateX(30), translateY(25vh);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(45vh), translateY(40vh);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(50vh), translateY(50vh);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateX(55vh, 65vh);
+  }
+  70% {
+    opacity: 0.6;
+    transform: translateX(65vh, 70vh);
+  }
+  80% {
+    opacity: 0.6;
+    transform: translateX(70vh, 80vh);
+  }
+  90% {
+    opacity: 0.3;
+    transform: translateX(80vh, 85vh);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(85vh, 90vh);
+  }
+}
+#taxi {
+  transform: translate(85vh, 90vh);
+}
+#bus {
+  position: absolute;
+  animation: drive 5s linear forwards;
+}
+#traffic {
+  transform: translate(30vh, 48.5vh);
+  z-index: 2;
+}
+
+#bus-box {
+  transform: translate(150vw, 48.5vh);
+}
+#bridge {
+  z-index: 1;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(-93vw);
+  }
+}
+
+#lamp {
+  transform: translateX(50vh);
+  z-index: 0;
+  background-color: whitesmoke;
+}
+#lights-1 {
+  z-index: 3;
+  transform: translate(32vh, -12vh);
+  animation: blink1 5s linear infinite;
+}
+#lights-2 {
+  z-index: 4;
+  transform: translate(-60vh, 2vh);
+  animation: blink2 10s linear infinite;
+}
+
+@keyframes blink1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
